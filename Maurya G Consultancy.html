@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <title>Maurya G Consultancy</title>
+  <style>
+    /* Reset and Base Styles Code below */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Section */
+    header {
+      background-color: #403465;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    header nav ul {
+      list-style: none;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+      color: #ffd501;
+    }
+
+    /* Add company logo */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 80px;
+      height: auto;
+    }
+
+    /* Services Section */
+    #services {
+      padding: 40px 0;
+    }
+
+    #services h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .service-section {
+      margin-bottom: 40px;
+    }
+
+    .service-section h3 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      color: #27ae60;
+      text-decoration: underline;
+    }
+
+    .service-section ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .service-section ul li {
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .service-section ul li img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 40px 0;
+      background-color: #e8e8e8;
+    }
+
+    #contact h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    #contact p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .contact-details {
+      list-style-type: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .contact-details li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contact-details li strong {
+      color: #2c3e50;
+    }
+
+    /* Contact icons */
+    .contact-icon {
+      margin-right: 5px;
+    }
+   
+    /* Footer Section */
+    footer {
+      background-color: #2c3e50;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .service-section ul li img {
+        width: 100px;
+        height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+        margin-right: 10px;
+      }
+    }
+
+    #chat{
+      height: 50px;
+      width: 50px;
+      border-radius: 10%;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 1000;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png");
+      background-size: cover;
+    }
+    #Tchat{
+      height: 45px;
+      width: 45px;
+      border-radius: 10%;
+      position: fixed;
+      bottom: 65px;
+      right: 10px;
+      z-index: 1000;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png");
+      background-size: cover;
+    }
+    #Mobile{
+      height: 47px;
+      width: 47px;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 118px;
+      right: 10px;
+      z-index: 1000;
+      background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/56/telephone-304968_1280.png");
+      background-size: cover;
+    }
+
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70px; /* Adjust width as needed */
+        border-radius: 50%;
+        position: fixed;
+        top: 10px;
+      }
+      /*UPI Copu Button Style*/
+      .copy-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .copy-button {
+      padding: 5px 10px;
+      border: none;
+      background-color: #2c3e50;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .copy-button:hover {
+      background-color: #050e44;
+    }
+    /*UPI Copu Button Style end*/
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="data:image/jpeg;base64,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" alt="Company Logo" class="logo"> <!-- Add your company logo URL here -->
+    <div class="container">
+      <h1><u>Maurya G Consultancy</u></h1>
+      <p>Your Trusted Financial & Business Partner</p>
+      <p>We offer All Service at Reasonable Rate</p>
+      <nav>
+        <ul>
+          <li><a href="#investment">Investment</a></li>
+          <li><a href="#loan">Loan & Credit</a></li>
+          <li><a href="#general">Other Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      
+      <marquee bgcolor="#403465" direction="left"> <font size="5" color="#ffd501">Diwali offer get free informative Website & Discount 10%*</font> </marquee>
+    
+      <!-- Investment -->
+      <div id="investment" class="service-section">
+        <h3>Investment</h3>
+        <ul>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw258fNixotgquh7Y0tij33pDW3RGXTEGMtQ&s" alt="Term Insurance">Term Insurance</li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdlEKFcfNr9Q0tnh8FsjcvR7oEiT6Ow_8gQ&s" alt="SIP">SIP & Mutual Fund</li>
+          <li><img src="https://cdn-icons-png.flaticon.com/512/8833/8833917.png" alt="Health Insurance">Health Insurance</li>
+          <li><img src="https://life.futuregenerali.in/media/ycsbp5hb/life-insurance-for-you-and-your-family.jpg" alt="Life Insurance">Life Insurance</li>
+          <li><img src="https://upwealth.in/wp-content/uploads/2020/06/kids-marriage-goal-1024x1024.png" alt="Child Marriage Plan">Child Marriage Plan</li>
+          <li><img src="https://digitallearning.eletsonline.com/wp-content/uploads/2019/12/Why-School-education-crucial-for-child-development.jpg" alt="Child Education Plan">Child Education Plan</li>
+          <li><img src="https://cdn-icons-png.flaticon.com/512/6551/6551840.png" alt="Retirement Planing">Retirement Planing</li>
+        </ul>
+        <hr color="red"><hr color="red">
+      </div>
+      
+      
+
+      <!-- Loan & Advance -->
+      <div id="loan" class="service-section">
+             <h3>Loan & Credit</h3>
+        <ul>
+          <li><img src="https://www.pngplay.com/wp-content/uploads/9/Mastercard-Transparent-Background.png" alt="Credit Card">Credit Card</li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTBNrALudejk4mgGLUGWgc0yRs5tmZFkifw&s" alt="Personal Loan">Personal Loan</li>
+          <li><img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-accounting-logo-image_80370.jpg" alt="Loan Against Mutual Fund">Loan Against Mutual Fund & SIP</li>
+        </ul>
+        <hr color="red"><hr color="red">
+      </div>
+    
+      <!-- General Services -->
+      <div id="general" class="service-section">
+        <h3>All Other Services</h3>
+        <ul>
+          <li><img src="https://www.pancardapp.com/blog/wp-content/uploads/2019/04/sample-pan-card.jpg" alt="PAN Card" width="100"> New PAN Card</li>
+          <li><img src="https://upload.wikimedia.org/wikipedia/hi/thumb/c/cf/Aadhaar_Logo.svg/450px-Aadhaar_Logo.svg.png?20211118080822" alt="Aadhar">Aadhar-PAN Link</li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDmQpJ0xgAXoJYHjw3IGOAt9ay5Ic3mnEKNA&s" alt="GST Return">GST Return</li>
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_of_Income_Tax_Department_India.png" alt="Income Tax Return">Income Tax Return Filling</li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm3KRZIkNxFpQvlF0aDIE8HHriWN6ZGDMOGQ&s" alt="Business Accounting">Business Accounting Service</li>
+          <!-- <li><img src="https://seeklogo.com/images/P/power-bi-icon-logo-E1B451ED39-seeklogo.com.png" alt="Power BI Traning">Teaching Power BI</li> -->
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhytl5iWTW3JpDuH_zQAS5hI8Q1YeJ2HTfaUdU1KSbVw_dGXgIYHzGffBiH5q5yX2Xq2g&usqp=CAU" alt="Excel Training">Online Courses Excel, Power BI, SQL</pre></h6></li>
+          <li><img src="https://misreport.in/assets/images/logo.png" alt="MIS Automation">MIS Automation for Business</li>
+          <li><img src="https://asset.gecdesigns.com/img/visiting-card-templates/bold-and-creative-business-card-template-for-entrepreneurs-1680966036989-cover.webp" alt="Digital Visiting Card">Digital Visiting Card</li>
+        </ul>
+        <hr color="red"><hr color="red">
+      </div>
+      
+      <div id="general" class="service-section">
+      <h3>Online Course Package ₹3,999/- Only</h3>
+      <ul>
+        <li><img src="https://media.licdn.com/dms/image/C5612AQFpsCnlRktViA/article-cover_image-shrink_600_2000/0/1645750005454?e=2147483647&v=beta&t=27I0U5iqBPMrz0_Sguc91bUM2nwGDFzMInY0LrBeCw8" alt="Excel Training">Advance Excel</li>
+        <li><img src="https://pei.com/wp-content/uploads/2016/08/maxresdefaultreduced.jpg" alt="Power BI">Advance Power BI</li>
+        <li><img src="https://images.ctfassets.net/lzny33ho1g45/6scPSxCdwNFMjunqSjtZKw/c1c94e86a6aaf07a7ab9d13305994cef/automate-microsoft-excel-00-hero.jpg?w=1520&fm=jpg&q=30&fit=thumb&h=760" alt="Excel Automation">Excel Automation</li>
+        <li><img src="https://seeklogo.com/images/M/microsoft-powerpoint-2013-logo-52B688AEC4-seeklogo.com.png" alt="Advance PPT">Advance PPT</li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="Advance SQL">Advance SQL</li>
+        <li><img src="https://misreport.in/assets/images/logo.png" alt="MIS Automation">MIS Automation for Business</li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Office_365_logo_%282013-2019%29.png" alt="Office 365 Licence">Office 365 Licence</li>
+      </ul>
+      <hr color="red"><hr color="red">
+    </div>
+      <marquee bgcolor="#403465" direction="left"> <font size="5" color="#ffd501">LOAN, CREDIT CARD, PERSONAL LOAN, LOAN AGAINST MUTUAL FUND, NEW PAN CARD, AADHAR CARD, GST RETURN, TDS RETURN, ITR, ACCOUNTING SERVICES,EXCEL TRANING, MIS etc</font> </marquee>    
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any queries or would like to avail our services, please contact us:</p>
+      <ul class="contact-details">
+        <li><strong></strong> <u>Maurya G Consultancy</u></li>   <!-- Lond Code:-# <li><strong>Name:</strong> <span style="text-decoration: underline;">Gyanchand Maurya</span></li> -->
+             <li><strong>Mobile:</strong> 
+          <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20"> 
+          <a href="tel:9220973200">Call: 9220973200</a>
+        </li>
+        <li><strong>WhatsApp:</strong> 
+          <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp Icon" width="20"> 
+          <a href="https://wa.me/9220973200" target="_blank">9220973200</a>
+        </li>
+        <li><strong></strong> 
+            <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail Icon" width="20"> 
+            <a href="mailto:gyanchandmaurya@gmail.com" target="_blank">gyanchandmaurya@gmail.com</a>
+          </li>          
+    </div>
+  </section>  
+
+    <!-- Footer Section -->
+  <footer>
+    <strong>Pay to Gyanchand Maurya using UPI id</strong>
+    <div class="container">
+      <div class="copy-container">
+        UPI:<span id="text-to-copy">gyanchandmaurya@axisbank</span>
+        <button class="copy-button" onclick="copyText()"><i class="fas fa-copy"></i></button>
+      </div>
+      
+<script>
+  function copyText() {
+    const text = document.getElementById('text-to-copy').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Text copied: ' + text);
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  }
+</script>
+
+    <!--WhatsApp Chat floting-->
+    <a href="https://wa.me/9220973200" target="_blank"><div id="chat"></div> </a>
+        <!--Telegram Chat floting-->
+    <a href="https://t.me/gyanchandmaurya" target="_blank"><div id="Tchat"></div> </a>
+    <a href="tel:9220973200" target="_blank"><div id="Mobile"></div> </a>
+
+      <marquee bgcolor="#2c3e50" direction="left"> <font size="4"><p>&copy; 2024 Maurya G Consultancy | All Rights Reserved</p></font> </marquee>
+      <!-- <p>&copy; 2024 Maurya G Consultancy | All Rights Reserved</p> -->
+    </div>
+    <br><br>
+  </footer>
+</body>
+</html>
+
+
+
+<!-- 
+<a href="upi://pay?pa=gyanchandmaurya-2@okaxis&pn=Gyanchand%20Maurya" style="text-decoration:none;">
+        <img src="https://scontent.fbom61-1.fna.fbcdn.net/v/t39.30808-6/461514322_841799981434370_7421031967193997636_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7o6i92NiAOIQ7kNvgGf4Ykn&_nc_ht=scontent.fbom61-1.fna&oh=00_AYBXgf6HJonFldv8P5Cr1g8cMPT76NECfq_TGtl6iHxbDw&oe=66FC2AD4" alt="Google Pay" style="width:250px;height:auto;">
+    </a> 
+    <script>
+  function copyText() {
+    const text = document.getElementById('text-to-copy').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Text copied: ' + text);
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  }
+</script>
+-->
