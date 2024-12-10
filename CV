@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Gyanchand Maurya</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: flex;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .left-column {
+            background-color: #2d3e50;
+            color: white;
+            width: 30%;
+            padding: 25px;
+            text-align: center;
+        }
+        .right-column {
+            width: 70%;
+            padding: 25px;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #ff9800;
+            margin-bottom: 15px;
+        }
+        h2, h3 {
+            color: #2d3e50;
+            margin-bottom: 15px;
+        }
+        .left-column h2 {
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .skills-list {
+            text-align: left;
+            padding-left: 15px;
+            border-left: 3px solid #ff9800;
+            color: #ffffff;
+        }
+        .skills-list li::before {
+            content: "★";
+            color: #ff9800;
+            margin-right: 10px;
+        }
+        .section-title {
+            border-bottom: 2px solid #ff9800;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+        .personal-details ul li::before {
+            content: "•";
+            color: #ff9800;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 15px;
+            border-left: #00bcd4;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .left-column a:hover {
+            text-decoration: underline;
+        }
+        .right-column h3 {
+            margin-top: 20px;
+            color: #00bcd4;
+        }
+        .right-column ul li::before {
+            content: "✓";
+            color: #00bcd4;
+            margin-right: 10px;
+        }
+        .skills-title {
+            color: #00bcd4;
+            border-bottom: 2px solid #00bcd4;
+            border-top: 2px solid #00bcd4;
+            border-left: 2px solid #00bcd4;
+            border-right: 2px solid #00bcd4;
+        }
+        /* Company logo styling & Work Experience */
+        .company-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .company-logo {
+            width: 90px;
+            height: 90px;
+            margin-right: 15px;
+        }
+        .company-name {
+            font-weight: bold;
+            font-size: 22px;
+            color: #893333;
+            border-bottom: 2px solid #6b4307;
+        }
+        .date {
+            font-size: 14px;
+            color: #010b0c;
+            margin-top: 5px;
+        }
+        .designation {
+            font-size: 16px;
+            color: #00bcd4;
+            margin-top: 5px;
+        }
+        .profile-photo{
+            border-top: 4px solid #33ff00;
+            border-right: 4px solid #33ff00;
+            border-left: 4px solid #d4009b;
+            border-bottom: 4px solid #d4009b;
+            border-bottom-left-radius: 20%;
+            border-top-right-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Photo Section -->
+            <img class="profile-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj-7vmxPp08LHgKvt-6-ZfY3fgzFHkoD3Vbg&s" alt="Gyanchand Maurya Photo">
+            <h1>Gyanchand Maurya</h1>
+            <h2 class="skills-title">Skills</h2>
+            <ul class="skills-list">
+                <li>Advanced Excel <br> (VLOOKUP, HLOOKUP, FILTER, 365 Formula etc.)</li>
+                <li>MS Office 365</li>
+                <li>Excel Power Queries</li>
+                <li>Tally Prime 3.0</li>
+                <li>Zoho Books</li>
+                <li>Microsoft Power BI</li>
+                <li>Photoshop & Corel Draw</li>
+                <li>Computer Hardware Maintenance</li>
+            </ul>
+            <hr color=#00bcd4>
+            <h2>Contact Info</h2>
+            <div class="contact-info">
+                <p><a href="mailto:gyanchandmaurya@gmail.com">gyanchandmaurya@gmail.com</a></p>
+                <p><a href="tel:+919220973200">+91 9220973200</a></p>
+            </div> 
+            <hr color=#00bcd4>
+            
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <h2 class="section-title">Profile Summary</h2>
+            <p>
+                My forte is excellence in the field of ACCOUNTS & DATA ANALYST. I’m looking for more than just a job—an opportunity to create the future. I’m interested in elevating my workplace to a higher level of recognition and building a career that provides stimulating growth opportunities while improving life quality, benefiting my employer.
+            </p>
+
+            <h2 class="section-title">Educational Qualifications</h2>
+            <ul>
+                <li>Bachelor of Commerce from Ramniranjan Jhunjhunwala College, 60% (2010-2011)</li>
+                <li>HSC from B. S. Johdhale College, 58% (2007-2008)</li>
+                <li>SSC from New Hindi High School, 58% (2005-2006)</li>
+            </ul>
+
+            <h2 class="section-title">My Interests</h2>
+            <ul>
+                <li>Learning New Software Tools</li>
+                <li>Exploring Solutions & New Ideas</li>
+                <li>Watching Motivational Videos</li>
+            </ul>
+
+            <h2 class="section-title">Additional Activity</h2>
+            <ul>
+                <li>Certificate in Business Analytics with Excel</li>
+                <li>Tally to Power BI Dashboard (Auto-update in a single click)</li>
+                <li>Prepared Book Sales Software in Excel using VBA & Power Query</li>
+                <li>One-Click Fully Automated Collection Report from Tally to Excel</li>
+                <li>Upgraded existing systems as per organizational requirements</li>
+            </ul>
+
+            <h2 class="section-title">Work Experience</h2>
+            
+            <!-- Updated Company Section with Logo and Designation -->
+            <div class="company-header">
+                <img class="company-logo" src="https://media.licdn.com/dms/image/v2/C560BAQEhDC9gbo4V_g/company-logo_200_200/company-logo_200_200/0/1630646703956/avanti_infra_advisory_llp_logo?e=2147483647&v=beta&t=rNmEgCe2scLrwNqN869yQ2ZwlEzWI3BYsyJLkAJ_Rh0" alt="Avanti Logo">
+                <div>
+                    <div class="company-name">Avanti Infra Advisory</div>
+                    <div class="date">(9th August 2021 – Till Date)</div>
+                    <div class="designation">Senior Executive</div>                    
+                </div>
+            </div>
+            <ul>
+                <li>Checking Tally Sales, Purchase & Expenses</li>
+                <li>Checking Quotation, Gate Pass, Bill of Vendor</li>
+                <li>Preparing Daily Collection Reports and Outstanding Statements</li>
+                <li>Managing Vendor Payments, Reconciliation, GST/TDS-related work</li>
+                <li>Conducting Zoho Books and Excel Training for Client Staff</li>
+                <li>Migrating accounts from QuickBooks & Tally to Zoho Books</li>
+                <li>Ensure Timely Payment to Vendor</li>
+                <li>Checking Reconciliation of All Bank Accounts</li>
+                <li>Checking Reconciliation of Vendor & Customer Ledgers</li>
+                <li>Reconciliation of Caution Money & Other Ledgers</li>
+                <li>Inter Company Accounting</li>
+                <li>Checking Event wise Costing</li>
+                <li>Depreciation Working & Accounting</li>
+                <li>TDS Booking, TDS Working & Preparing Quarterly Return for TDS Filling.</li>
+                <li>Preparing MIS</li> 
+                <li>Updating the Process when Needed</li>
+                <li>Preparing other Reports as demand by Management</li>
+                <li>Assist in Account Finalization & Audit</li>
+                <li>Supervising other Centers</li>
+                <li>Any Other Work Assing by Management & Boss</li>
+            </ul> <hr>
+
+            <div class="company-header">
+                <img class="company-logo" src="https://cdn.wcaworld.com/logos/57267.jpg" alt="GAF Global Logistics Logo">
+                <div>
+                    <div class="company-name">GAF Global Logistics Pvt. Ltd.</div>
+                    <div class="date">(26th Oct, 2015 – 8th Aug,2021)</div>
+                    <div class="designation">Account Executive</div>
+                </div>
+            </div>
+            <ul>
+                <li>Handling branch accounting and supervising other branches</li>
+                <li>Maintaining ledgers, managing receivables/payables, and reconciling bank accounts</li>
+                <li>Knowledge of TDS, GST, and VAT handling and returns</li>
+                <li>Handled all banking transactions and administrative duties</li>
+                <li>Entering all expenses in the software (local expenses as well as overseas expenses)</li>
+                <li>Preparing Vouchers</li>
+                <li>Correspondence with Customers</li>
+                <li>Maintaining debtor’s ledger</li>
+                <li>Account Receivable</li>
+                <li>Account Payable</li>
+                <li>Providing outstanding statement</li>
+                <li>Handling All Banking Transactions</li>
+                <li>Reconciliation of bank Account Statement</li>
+                <li>Reconciliation of Ledgers</li>
+                <li>Checking job wise Profitability</li>
+                <li>GST working, Payment & Return</li>
+                <li>VAT working, Payment & Return</li>
+                <li>Online Stamp duty and Custom duty Payment</li>
+                <li>Follow Legal Matter</li>
+
+            </ul> <hr>
+
+            <div class="company-header">
+                <img class="company-logo" src="https://logowik.com/content/uploads/images/muthoot-finance9193.jpg" alt="Muthoot Finance Logo">
+                <div>
+                    <div class="company-name">Muthoot Finance Ltd.</div>
+                    <div class="date">(6th Aug, 2012 to 24th Oct, 2015)</div>
+                    <div class="designation">Account Assistant</div>
+                </div>
+            </div>
+            <ul>
+                <li>Handling cash counter and daily accounting entries</li>
+                <li>Managing Gold Loan Transactions, Business Reporting</li>
+                <li>Performed BRS and maintained branch registers</li>
+                <li>Handling Money Transfer Division.</li>
+                <li>KYC, Demat A/C Opening.</li>
+                <li>Payment of Branch Expenses.</li>
+                <li>Posting Daily Accounting entry.</li>
+                <li>Gold Loan Receipt & Payment.</li>
+                <li>Gold Stock Verification.</li>
+                <li>RTGS / NEFT.</li>
+                <li>Daily Business Reporting.</li>
+                <li>Maintaining Registers.</li>
+                <li>Customer Service Selling of Gold Coin & NCD</li>
+            </ul> <hr>
+            
+            
+        </div>
+    </div>
+
+
+</body>
+</html>
