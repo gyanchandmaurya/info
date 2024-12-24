@@ -215,7 +215,7 @@
     #gotop{
       height: 50px;
       width: 50px;
-      border-radius: 10%;
+      border-radius: 50%;
       position: fixed;
       bottom: 4px;
       left: 180px;
