@@ -213,11 +213,11 @@
       background-size: cover;
     }
     #gotop{
-      height: 50px;
-      width: 50px;
+      height: 42px;
+      width: 42px;
       border-radius: 50%;
       position: fixed;
-      bottom: 4px;
+      bottom: 6px;
       left: 180px;
       z-index: 1000;
       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cdNpVBiOSNb-paJnSLwSSRxZKtIEeQLbVw&s");
