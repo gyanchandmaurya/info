@@ -304,41 +304,4 @@
     .icon.rotate {
       transform: rotate(180deg);
     }
-/* **************************For Offers & News blinking effect**********************Start */
-        /* For the scrolling effect */
-    .scrolling-text {
-        white-space: nowrap;
-        overflow: hidden;
-        display: block;
-        /* animation: scroll 10s linear infinite; */
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-    /* For the blinking effect */
-    .blinking-text {
-        animation: blink 1s step-start infinite;
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
-    }
-
-    h5 {
-        color: red;
-        font-size: 30px;
-        background-color: aqua;
-        padding: 10px;
-        display: inline-block;
-    }
-/* **************************For Offers & News blinking effect**********************End */
   </style>
