@@ -99,7 +99,7 @@
         .navbar {
             display: flex;
             background-color: #4100b0;
-            padding: 10px;
+            padding: 15px;
             margin-top: 10px;
             align-items: center;
             justify-content: center;
@@ -108,35 +108,28 @@
             border-width: 0PX;
         }
 
-        .navbar2 {
-            display: flex;
-            background-color: #4100b0;
-            padding: 5px;
-            margin-top: 10px;
-            align-items: center;
-            justify-content: center;
-            border-width: 10PX;
-            width: 300px;
-        }
-
         .navbar a {
             color: white;
             background-color: #0a3363;
             text-decoration: none;
             padding: 8px 5px;
-            margin-right: 1px;
+            margin-right: 3px;
             border-style: solid;
-            border-bottom-right-radius: 20px;
-            border-top-left-radius: 10px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 00px;
             border-width: 3px;
-            border-top-color: #ffffff;
-            border-bottom-color: #ffffff;
+            border-top-color: none;
+            border-bottom-color:#0a3363;
+            border-right-color: #0a3363;
+            border-left-color: #0a3363;
         }
 
 
         .navbar a:hover {
             background-color: rgb(95, 25, 5);
             font-weight: bold;
+            border: solid;
+            border-color: #fa0a6e;
         }
 
         .dropdown {
@@ -156,7 +149,7 @@
         }
 
         .dropdown-content a {
-            margin: 5px;
+            margin: 0px;
             color: white;
             padding: 10px 15px;
             text-decoration: none;
@@ -172,6 +165,33 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* ----------Inner Dropdown-------------------------- */
+            .dropdown2:hover .dropdown-content2 {
+            display: block;   
+            background-color: #fa0a6e;
+            color: #2ab611;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            background-color: none;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 200;
+            margin-left: 150px;
+            margin-top: -8px;
+        }
+
+        .dropdown-content2 a:hover {
+            background-color: rgb(9, 255, 46);
+            color: black;
+            font-weight: bold;
+        }
+
+        /* ----------Inner Dropdown-------------------------- */
+
     </style>
 </head>
 <body>
@@ -190,6 +210,17 @@
         <div class="dropdown">
             <a>AG-NANDIVALI</a>
             <div class="dropdown-content">
+                <div class="dropdown2">
+                    <a>FRONT OFFICE</a>
+                    <div class="dropdown-content2">
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sonali_pawar_aryagurukul_in/EV5GHkGkN_hGrHmAhqsp0RMBpfrv0lKNug0Z3Z7-sGFMYg?e=Vxb7d8" target="_self" >BUS Collection Update</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:x:/r/personal/sonali_pawar_aryagurukul_in/Documents/2024-25/New%20Admission%202024-2025.xlsx?d=w4b8ce032f80441d5b818ce97559f905a&csf=1&web=1&e=XnqQ6R" target="_self">New Admission 2024-25</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sonali_pawar_aryagurukul_in/EddRH-8yt3BAtgvPfyzXMTEBf7NxJ9v4NRdu4Ne7TS2RMA?e=acxZbx" target="_self" >I to XII Student List 2024-25</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sonali_pawar_aryagurukul_in/EQhmWJMhIdtHmHKaEXMKvOABZgI2Lb9mWFNuYtOyMUrKdQ?e=NYSZoL" target="_self" >Withdrawal 2024-25</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:b:/g/personal/gyanchand_maurya_aryagurukul_in/EVDIwoQmlC9JswoDh8oy7G4BNE5QV5xFPapM0-yDNe9fSg?e=uiw3Qs" target="_self" >Bus Fees Rate-Card 2024-25</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/bhushan_todankar_aryagurukul_in/EXMp4AqLw8VFgC9SzjfCIesB8J51H1RK7DVvszTZP6kSXA?e=a4LuIS" target="_self" >Funds Flow</a>
+                    </div>
+                </div>
                 <a href="https://aryaglobalschools.sharepoint.com/:f:/s/AccountsDepartment-AryaGurukul-Nandivili/EuKp_tiOrMBLt8MCphz1xVsBVilXq7ryD-pvGMUWYL-YEg?e=xgbZ3I" target="_self">AGN Teams Folder</a>
                 <a href="https://aryaglobalschools.sharepoint.com/:x:/s/AccountsDepartment-AryaGurukul-Nandivili/EcJl-6lMP4dKsek0f9-GxRoBKoSHrD3ureEfDwbxcdCPIg?e=o80W48" target="_self">AGN New Pay_Tracker 2024</a>
                 <a href="https://aryaglobalschools-my.sharepoint.com/:f:/g/personal/gyanchand_maurya_aryagurukul_in/EhuggJhDq69NryWWeI6TKRkB5VlGE8RkrtjeCYph0ygKlQ?e=6g7TpW" target="_self">AGN Bank Statement Folder</a>
@@ -197,18 +228,6 @@
                 <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sachin_chavan_stmaryschool_in/ERiHpJtMwqJFsdOEEKfm3o0BUkR_yu3Yfugp4ckdcImirw?e=y1OGKI" target="_self">Bus Collection Update for Billing</a>
                 <a href="https://aryaglobalschools.sharepoint.com/:f:/s/AccountsDepartment-AryaGurukul-Nandivili/EiFJHpjn-xNCgGzmQ2ROrgwByBqft-W49TOLqQ1GJ2haAg?e=rVV3Zz" target="_self">AGN TDS Working</a>
                 <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/bhushan_todankar_aryagurukul_in/EVoFhJeZ3BFPr9K7p8txlxEBxsrZkgkLZ9R0G9Kb6Gb6RA?e=P2RILK" target="_self">Examination & Registration</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <a>FRONT OFFICE</a>
-            <div class="dropdown-content">
-                <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sonali_pawar_aryagurukul_in/EV5GHkGkN_hGrHmAhqsp0RMBpfrv0lKNug0Z3Z7-sGFMYg?e=Vxb7d8" target="_self" >BUS Collection Update</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:x:/r/personal/sonali_pawar_aryagurukul_in/Documents/2024-25/New%20Admission%202024-2025.xlsx?d=w4b8ce032f80441d5b818ce97559f905a&csf=1&web=1&e=XnqQ6R" target="_self">New Admission 2024-25</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sonali_pawar_aryagurukul_in/EddRH-8yt3BAtgvPfyzXMTEBf7NxJ9v4NRdu4Ne7TS2RMA?e=acxZbx" target="_self" >I to XII Student List 2024-25</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/sonali_pawar_aryagurukul_in/EQhmWJMhIdtHmHKaEXMKvOABZgI2Lb9mWFNuYtOyMUrKdQ?e=NYSZoL" target="_self" >Withdrawal 2024-25</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:b:/g/personal/gyanchand_maurya_aryagurukul_in/EVDIwoQmlC9JswoDh8oy7G4BNE5QV5xFPapM0-yDNe9fSg?e=uiw3Qs" target="_self" >Bus Fees Rate-Card 2024-25</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:x:/g/personal/bhushan_todankar_aryagurukul_in/EXMp4AqLw8VFgC9SzjfCIesB8J51H1RK7DVvszTZP6kSXA?e=a4LuIS" target="_self" >Funds Flow</a>
             </div>
         </div>
 
@@ -240,6 +259,15 @@
         <div class="dropdown">
             <a>TEAMS FOLDER</a>
             <div class="dropdown-content">
+                <div class="dropdown2">
+                    <a>ATTENDANCE OUTSOURCE</a>
+                    <div class="dropdown-content2">
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:f:/r/personal/ratnesh_kumar_stmaryschool_in/Documents/Biometric%20Attendance%20of%20Outsoursed%20staff/Avanti%20Infra%20Advisory%20LLP/2024-25?csf=1&web=1&e=dQcbqj" target="_self">Avanti Infra Advisory</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:f:/r/personal/ratnesh_kumar_stmaryschool_in/Documents/Biometric%20Attendance%20of%20Outsoursed%20staff/Roshan%20Securities/RS_HO/Work%20Duration?csf=1&web=1&e=FQ0HLm" target="_self">Roshan Securities</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:f:/r/personal/ratnesh_kumar_stmaryschool_in/Documents/Biometric%20Attendance%20of%20Outsoursed%20staff/Secret%20Services/SS_AGN/Work%20Duration?csf=1&web=1&e=llLOVE" target="_self">Secret Services</a>
+                        <a href="https://aryaglobalschools-my.sharepoint.com/:f:/g/personal/ratnesh_kumar_stmaryschool_in/EgtaMl19-ZJArNzY-v91JPsBoe8Jl5ED1VX_eOwMvpkslg?e=sDapkO" target="_self">S. K. SOlutions</a>
+                    </div>
+                </div>
                 <a href="https://aryaglobalschools.sharepoint.com/:f:/s/AccountsDepartment-AryaGurukul-Nandivili/EuKp_tiOrMBLt8MCphz1xVsBVilXq7ryD-pvGMUWYL-YEg?e=xgbZ3I" target="_self">AGN Teams Folder</a>
                 <a href="https://aryaglobalschools.sharepoint.com/:f:/s/AccountsDepartment-Aryagurukul-Ambernath/EkK9cc7xVedIv_tQs4pcjnUBbdpHzfCTI99mC6avPeMwbw?e=LmmrnD" target="_self">AGA Teams Folder</a>
                 <a href="https://aryaglobalschools.sharepoint.com/:f:/s/AccountsDepartment-LittleAryans/Et9dKYC5tPZLvgkFF-N-dPcBLbWwSji2AKFf2ekmNrO6uA?e=WpSfLd" target="_self">LA Teams Folder</a>
@@ -249,23 +277,21 @@
 
             </div>
         </div>
-        <div class="dropdown">
-            <a>ATTENDANCE</a>
-            <div class="dropdown-content">
-                <a href="https://aryaglobalschools-my.sharepoint.com/:f:/r/personal/ratnesh_kumar_stmaryschool_in/Documents/Biometric%20Attendance%20of%20Outsoursed%20staff/Avanti%20Infra%20Advisory%20LLP/2024-25?csf=1&web=1&e=dQcbqj" target="_self">Avanti Infra Advisory</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:f:/r/personal/ratnesh_kumar_stmaryschool_in/Documents/Biometric%20Attendance%20of%20Outsoursed%20staff/Roshan%20Securities/RS_HO/Work%20Duration?csf=1&web=1&e=FQ0HLm" target="_self">Roshan Securities</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:f:/r/personal/ratnesh_kumar_stmaryschool_in/Documents/Biometric%20Attendance%20of%20Outsoursed%20staff/Secret%20Services/SS_AGN/Work%20Duration?csf=1&web=1&e=llLOVE" target="_self">Secret Services</a>
-                <a href="https://aryaglobalschools-my.sharepoint.com/:f:/g/personal/ratnesh_kumar_stmaryschool_in/EgtaMl19-ZJArNzY-v91JPsBoe8Jl5ED1VX_eOwMvpkslg?e=sDapkO" target="_self">S. K. SOlutions</a>
-            </div>
-        </div>
 
         <div class="dropdown">
             <a>AUDIT & Other</a>
             <div class="dropdown-content">
                 <a href="https://aryaglobalschools-my.sharepoint.com/:f:/g/personal/kavitajohari_avanti_aryagurukul_in/Evgotmsq5fxFt_gn5lmrbKABDVSmaiAt1FMbXviPFoIRhg?e=8khP4I" target="_self">Inter Company Balance 2024-25</a>
-                <a style="border-style:none; background: rgb(95,25,5);border-radius: 0%; font-weight: bold;">Other Links.....</a>
                 <a href="https://3336.antracloud.com/" target="_self">Cloud Tally-Antra Web</a>
                 <a href="https://wss.mahadiscom.in/wss/wss?uiActionName=getCustAccountLogin" target="_self">Electricity Login (ID-agnandivali & Agn*9321968111)</a>
+                <div class="dropdown2">
+                    <a>Blank</a>
+                    <div class="dropdown-content2">
+                        <a href="" target="_self">Blank 1</a>
+                        <a href="" target="_self">Blank 2</a>
+                        <a href="" target="_self">Blank 3</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
