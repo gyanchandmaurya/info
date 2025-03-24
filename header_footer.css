@@ -261,11 +261,11 @@
     }
     /*UPI Copu Button Style end*/
 
-    /* Dropdown styling */
-    .dropdown {
+    /* Dropdownc styling */
+    .dropdownc {
       margin: 10px 0;
     }
-    .dropdown button {
+    .dropdownc button {
       width: 100%;
       background: #2c3e50;
       color: #fff;
@@ -280,10 +280,10 @@
       justify-content: space-between;
       align-items: center;
     }
-    .dropdown button:hover {
+    .dropdownc button:hover {
       background: #0b1cda;
     }
-    .dropdown-content {
+    .dropdown-contentcourse {
       display: none;
       padding: 10px;
       margin-top: 5px;
@@ -291,7 +291,7 @@
       border-radius: 5px;
       background-color: #f9f9f9;
     }
-    .dropdown-content p {
+    .dropdown-contentcourse p {
       margin: 0;
       padding: 5px 0;
     }
@@ -326,4 +326,138 @@
       background-position: center; /* Centers the image */
       border-radius: 10px;  
   }
+  
+      /* -----NAV BAR START------ */
+      .navbar {
+      display: flex;
+      background-color:#2c3e50;
+      padding: 15px;
+      margin-top: 10px;
+      align-items: center;
+      justify-content: center;
+      border-style: solid;
+      border-color: blue;
+      border-width: 0PX;
+    }
+
+    .navbar a {
+      color: rgb(255, 255, 255);
+      background-color: #0a3363;
+      text-decoration: none;
+      padding: 8px 5px;
+      margin-right: 3px;
+      border-style: solid;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 00px;
+      border-width: 3px;
+      border-top-color: #0a3363;
+      border-left-color: #0a3363;
+      border-right-color: #0a3363;
+      /* border-left-color: #0a3363; */
+    }
+
+
+    .navbar a:hover {
+      background-color: rgb(255, 0, 191);
+      font-weight: bold;
+      border: solid;
+      border-color: #ffffff;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1504ff;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      min-width: 200px;
+      margin-top: 0.18cm;
+      text-align: left;
+
+    }
+
+    .dropdown-content a {
+      margin: 0px;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgb(9, 255, 46);
+      color: black;
+      font-weight: bold;
+      border-color: #fa0aae;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ----------Inner Dropdown 2 Start-------------------------- */
+    .dropdown2:hover .dropdown-content2 {
+      display: block;
+    }
+
+    .dropdown-content2 {
+      display: none;
+      position: absolute;
+      background-color: none;
+      box-shadow: 0px 18px 16px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      /* min-height: 5px; */
+      min-width: 200px;
+      margin-left: 140px;
+      margin-top: -14px;
+    }
+    .dropdown-content2 a {
+      margin: 0px;
+      color: rgb(121, 239, 250);
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content2 a:hover {
+      background-color: rgb(9, 255, 46);
+      color: black;
+      font-weight: bold;
+    }
+    /* ----------Inner Dropdown 2 End-------------------------- */
+    /* ----------Inner Dropdown 3 Start-------------------------- */
+    .dropdown3:hover .dropdown-content3 {
+      display: block;
+    }
+
+    .dropdown-content3 {
+      display: none;
+      position: absolute;
+      background-color: none;
+      box-shadow: 0px 18px 16px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      min-width: 200px;
+      margin-left: 140px;
+      margin-top: -14px;
+    }
+    .dropdown-content3 a {
+      margin: 0px;
+      color: rgb(28, 137, 147);
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content3 a:hover {
+      background-color: rgb(9, 255, 46);
+      color: black;
+      font-weight: bold;
+    }
+    /* ----------Inner Dropdown 3 End-------------------------- */
+
   </style>
