@@ -392,7 +392,7 @@
     .dropdown-content a:hover {
       background-color: rgb(9, 255, 46);
       color: black;
-      font-weight: bold;
+      /* font-weight: bold; */
       border-color: #fa0aae;
     }
 
@@ -414,7 +414,7 @@
       /* min-height: 5px; */
       min-width: 200px;
       margin-left: 140px;
-      margin-top: -14px;
+      margin-top: -45px;
     }
     .dropdown-content2 a {
       margin: 0px;
@@ -427,7 +427,7 @@
     .dropdown-content2 a:hover {
       background-color: rgb(9, 255, 46);
       color: black;
-      font-weight: bold;
+      /* x */
     }
     /* ----------Inner Dropdown 2 End-------------------------- */
     /* ----------Inner Dropdown 3 Start-------------------------- */
@@ -443,11 +443,11 @@
       z-index: 1;
       min-width: 200px;
       margin-left: 140px;
-      margin-top: -14px;
+      margin-top: -45px;
     }
     .dropdown-content3 a {
       margin: 0px;
-      color: rgb(28, 137, 147);
+      color: rgb(184, 255, 92);
       padding: 10px 15px;
       text-decoration: none;
       display: block;
@@ -456,7 +456,6 @@
     .dropdown-content3 a:hover {
       background-color: rgb(9, 255, 46);
       color: black;
-      font-weight: bold;
     }
     /* ----------Inner Dropdown 3 End-------------------------- */
 
