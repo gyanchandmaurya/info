@@ -312,7 +312,7 @@
   }
   #youtube{
       background-image: url(https://cdn.pixabay.com/photo/2021/08/17/17/49/youtube-6553743_640.png);
-      width: 80px; /* Width of the div */
+      width: 150px; /* Width of the div */
       height: 40px; /* Height of the div */
       background-size: cover; /* Ensures the image covers the div */
       background-position: center; /* Centers the image */
