@@ -311,9 +311,9 @@
       gap: 5px; 
   }
   #youtube{
-      background-image: url(https://img.freepik.com/free-vector/subscription-button-with-bell-icon-notification_1017-43364.jpg);
-      width: 150px; /* Width of the div */
-      height: 80px; /* Height of the div */
+      background-image: url(https://cdn.pixabay.com/photo/2021/08/17/17/49/youtube-6553743_640.png);
+      width: auto; /* Width of the div */
+      height: 40px; /* Height of the div */
       background-size: cover; /* Ensures the image covers the div */
       background-position: center; /* Centers the image */
       border-radius: 10px;
