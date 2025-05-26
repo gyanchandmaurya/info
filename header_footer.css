@@ -342,7 +342,7 @@
 
     .navbar a {
       color: rgb(255, 255, 255);
-      background-color: #0a3363;
+      background-color: #2c3e50;
       text-decoration: none;
       padding: 8px 5px;
       margin-right: 3px;
@@ -350,10 +350,10 @@
       border-top-right-radius: 0px;
       border-top-left-radius: 00px;
       border-width: 3px;
-      border-top-color: #0a3363;
-      border-left-color: #0a3363;
-      border-right-color: #0a3363;
-      /* border-left-color: #0a3363; */
+      border-top-color: #2c3e50;
+      border-left-color: #2c3e50;
+      border-right-color: #2c3e50;
+      /* border-left-color: #2c3e50; */
     }
 
 
