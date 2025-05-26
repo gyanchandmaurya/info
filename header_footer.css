@@ -372,7 +372,7 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #1504ff;
+      background-color: #0a3363;
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
       z-index: 1;
       min-width: 200px;
