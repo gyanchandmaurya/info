@@ -72,7 +72,7 @@
         width: 70px; /* Adjust width as needed */
         border-radius: 50%;
         position: fixed;
-        top: 30px;
+        top: 15px;
         left: 10px;
         z-index: 1000;
       }
