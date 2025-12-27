@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wishes Add List of Gyanchand</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <style>
+/********** Template CSS **********/
+:root {
+    --primary: #32C36C;
+    --light: #F6F7F8;
+    --dark: #1A2A36;
+}
+/* ----------------------Enquiry Solar Site Survey Form Start------------------------ */
+        /* SURVEY FORM CSS STYLING */
+        .wishes_form{
+          display: flex;
+          justify-content: center;
+        }
+        .form-container {
+            background-color: #f4eaea;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: darkmagenta;
+        }
+        h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .wishes_button {
+            width: 50%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 25%;
+        }
+        .wishes_button:hover {
+            background-color: #218838;
+        }
+        .wishes_button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #status {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+/* ----------------------Enquiry Solar Site Survey Form Start------------------------ */
+</style>
+</head>
+
+<body>
+    <!-- ----------------------Wishes Form Start-------------------------- -->
+    <div class="wishes_form" id="contactus">
+    <div class="form-container">
+        <h2>Add Your Wishes</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <select id="wishes_type" name="wishes_type" required>
+                    <option value="" disabled selected>Select Wishes Type</option>
+                    <option value="Happy Birthday">Birthday</option>
+                    <option value="Happy Marriage Anniversary">Marriage Anniversary</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="email" id="email" name="email" placeholder="Enter Your E-Mail" required>
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="tel" id="tel" name="tel" placeholder="Enter Your Mobile Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date of Birth / Marriage</label>
+                <input type="date" id="date" name="date" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="wishemessage">Message</label> -->
+                <input type="text" id="wishemessage" name="wishemessage" placeholder="Your Wishes Message" required>
+            </div>
+
+            <div class="form-group">
+                <select id="wishes_img" name="wishes_img" required>
+                    <option value="" disabled selected>Select Wishes Image</option>
+                    <option value="1AtzG5-y69RODQVKFYJCgVMsth9FVSySC">Birthday Image</option>
+                    <option value="1sxk2PyfiIQgb8uvDuO3l8edtCtCtt78U">Marraige Anniversary Image</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="message">Message</label> -->
+                <textarea id="message" name="message" rows="4" placeholder="Write your remark (optional) "></textarea>
+            </div>
+
+            <button class="wishes_button" type="submit" id="submitBtn">Submit Wishes</button>
+            <div id="status"></div>
+        </form>
+    </div>
+    </div>
+
+    <script>
+        // --- JAVASCRIPT LOGIC ---
+        
+        // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3aWBLO4uzYEY-6OjiIu0QnhRzuuHIB4J4AUE8pqOZnrQSrYNVvtWb0bwSXFgUXHCt/exec'; 
+
+        const form = document.forms['contactForm'];
+        const submitBtn = document.getElementById('submitBtn');
+        const statusTxt = document.getElementById('status');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // 1. Change button state to loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "Sending...";
+            statusTxt.innerHTML = "";
+
+            // 2. Prepare data
+            const formData = new FormData(form);
+
+            // 3. Send data to Google Script
+            fetch(scriptURL, { method: 'POST', body: formData})
+                .then(response => {
+                    // Reset Form
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "Submit Inquiry";
+                    statusTxt.innerHTML = "Thank you! Your details have been submitted. Our Executive will contact you shortly";
+                    statusTxt.className = "success";
+                    form.reset();
+                })
+                .catch(error => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "Submit Inquiry";
+                    statusTxt.innerHTML = "Error! Something went wrong.";
+                    statusTxt.className = "error";
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
+    <!-- ----------------------Wishes Form End-------------------------- -->
+    
+</body>
+
+</html>
+
+
+<!-- --------------Google Sheet Script for Send Wishes with 2 different method------------------ -->
+<!-- // 1-------Send Wishes by checking condotion by Wishes Type Image ID Start-----------------
+function sendFormattedWishes() {
+  // const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Wishes");
+  const data = sheet.getDataRange().getValues();
+  const today = new Date();
+  const currentMonth = today.getMonth() + 1;
+  const currentDate = today.getDate();
+
+  for (var i = 1; i < data.length; i++) {
+    let type = data[i][1];      // Column B
+    let name = data[i][2];      // Column C
+    let email = data[i][3];     // Column D
+    let dateVal = new Date(data[i][5]); // Column F
+    let subject = data[i][6];   // Column G
+    let message = data[i][7];   // Column H
+    let imageFileId = data[i][8]; // Column I (The Image ID you added)
+
+    if (dateVal.getMonth() + 1 === currentMonth && dateVal.getDate() === currentDate) {
+      
+      // --- NEW LOGIC: Select Image ID based on Column B ---
+      let imageFileId = '';
+      if (type === "Birthday") {
+        imageFileId = '1CeBSjf7-bPWFiEVsp30KM47bHfM6R_0t';
+      } else if (type === "Marriage Anniversary") {
+        imageFileId = '1Ev7sFritXenlCNYKnX64fruVrlVRKG9O';
+      }
+
+      // Fetch the specific image blob for this row
+      let imageBlob = DriveApp.getFileById(imageFileId).getBlob().setName("wishImage");
+      // ----------------------------------------------------
+
+      // HTML Formatting: Using <b> for bold and <br> for new lines
+      let htmlBody = `
+        <div style="font-family: Arial, sans-serif; color: #333;">
+          <h2 style="color: #8B028F;">Happy ${type}!</h2>
+          <p>Dear <b>${name}</b>,</p>
+          <p><b style="color: #0008E0;">${message.replace(/\n/g, '<br>')}</b></p>
+          <br>
+          <img src="cid:wishBanner" style="width:100%; max-width:600px; border-radius:10px;" />
+          <p>Best Regards,<br><b>Gyanchand Maurya</b><br><b>Mobile:</b>9220973200<br>www.solarshakti.in</p>
+        </div>
+      `;
+
+      GmailApp.sendEmail(email, subject, "Please enable HTML to view this message.", {
+        htmlBody: htmlBody,
+        inlineImages: {
+          wishBanner: imageBlob
+        },
+        cc: "solarshakti.in@gmail.com"
+      });
+    }
+  }
+}
+// 1-------Send Wishes by checking condotion by Wishes Type Image ID End----------------- -->
+
+
+
+
+
+
+
+<!-- // 2------------------------------Send Wishes by Column Image ID Start----------------------------------------------------------
+function sendFormattedWishes() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Wishes");   //---Get Data by Sheet Name--- any one
+//  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();           //---Get Data by Active Sheet ---
+  const data = sheet.getDataRange().getValues();
+  const today = new Date();
+  const currentMonth = today.getMonth() + 1;
+  const currentDate = today.getDate();
+
+  for (var i = 1; i < data.length; i++) {
+    let type = data[i][1];      // Column B
+    let name = data[i][2];      // Column C
+    let email = data[i][3];     // Column D
+    let dateVal = new Date(data[i][5]); // Column F
+    let subject = data[i][6];   // Column G
+    let message = data[i][7];   // Column H
+    let imageFileId = data[i][8]; // Column I (The Image ID you added)
+
+    // Check if it's the right date and that an Image ID exists in Column H
+    if (dateVal.getMonth() + 1 === currentMonth && dateVal.getDate() === currentDate) {
+      
+      // Attempt to fetch the image from Column H
+      let imageBlob;
+      try {
+        if (imageFileId) {
+          imageBlob = DriveApp.getFileById(imageFileId).getBlob().setName("wishImage");
+        } else {
+          // Skip if no image ID is provided for this row
+          console.warn("No Image ID found for: " + name);
+          continue; 
+        }
+      } catch (e) {
+        console.error("Error fetching image for " + name + ": " + e.message);
+        continue;
+      }
+
+      // HTML Body
+      let htmlBody = `
+        <div style="font-family: Arial, sans-serif; color: #333;">
+          <h2 style="color: #8B028F;">Happy ${type}!</h2>
+          <p>Dear <b>${name}</b>,</p>
+          <p><b style="color: #0008E0;">${message.replace(/\n/g, '<br>')}</b></p>
+          <br>
+          <img src="cid:wishBanner" style="width:100%; max-width:600px; border-radius:10px;" />
+          <p>Best Regards,<br><b>Gyanchand Maurya</b><br><b>Mobile:</b>9220973200<br>www.solarshakti.in<br>mauryag.vercel.app</p>
+        </div>
+      `;
+
+      GmailApp.sendEmail(email, subject, "Please enable HTML to view this message.", {
+        htmlBody: htmlBody,
+        inlineImages: {
+          wishBanner: imageBlob
+        },
+        bcc: "solarshakti.in@gmail.com"
+      });
+    }
+  }
+}
+// 2------------------------------Send Wishes by Column Image ID End---------------------------------------------------------- -->
