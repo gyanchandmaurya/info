@@ -322,8 +322,8 @@
       background-position: center; /* Centers the image */
       border-radius: 10px;  
   }
-  https://www.google.com/search?q=calendar+logo&sca_esv=d33f661f42c9ee99&udm=2&biw=360&bih=663&sxsrf=AE3TifN1Ob6hlJJU9zW4B_Umiowv-zZaQg%3A1767022014616&ei=vp1SadupJfP31e8PvL-g2AI&oq=calendar+logo&gs_lp=EhJtb2JpbGUtZ3dzLXdpei1pbWciDWNhbGVuZGFyIGxvZ28qAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIlSpQyg1Y3yNwAHgAkAEAmAHXAaAByAiqAQUwLjQuMrgBAcgBAPgBAZgCBqACuAnCAg0QABiABBixAxhDGIoFwgIQEAAYgAQYsQMYQxiDARiKBcICChAAGIAEGEMYigXCAggQABiABBixA5gDAIgGAZIHBTAuMy4zoAfOD7IHBTAuMy4zuAe4CcIHBTMtNC4yyAdsgAgA&sclient=mobile-gws-wiz-img
-      /* -----NAV BAR START------ */
+ 
+ /* -----NAV BAR START------ */
       .navbar {
       display: flex;
       background-color:#2c3e50;
