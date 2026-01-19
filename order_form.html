@@ -1,0 +1,228 @@
+<!-- https://script.google.com/macros/s/AKfycbze3wQ-Nd8Y3q-IIbJv54cSjM0Ibs64o81qzBc2P3CjEADG1K_aBQu0tWdhWIg4sGtu/exec -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Order Form</title>
+
+<style>
+body {
+    background: linear-gradient(135deg, #5c7bed, #06b6d4);
+    font-family: "Poppins", sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    color: #fff;
+    border: solid;
+    border-width: 3px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0px 1px 2px #000;
+}
+
+input, select {
+    width: 97%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.85);
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #ffb300;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:disabled {
+    background: #c9c9c9;
+    cursor: not-allowed;
+}
+
+#successBox {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="form-box">
+
+  <h2>Please fill form below to place Cash on Delivery order</h2>
+
+  <input type="text" id="fullname" placeholder="Full Name" required>
+  <input type="number" id="mobile" placeholder="10 Digit Mobile No." maxlength="10" required>
+  <input type="text" id="address" placeholder="Full Address" required>
+  <input type="text" id="landmark" placeholder="Landmark (Optional)">
+  <input type="number" id="pincode" placeholder="6 Digit Pincode" required>
+  <input type="text" id="city" placeholder="City" required>
+
+  <select id="state" required>
+      <option value="">Select State</option>
+      <option>Maharashtra</option>
+      <option>Gujarat</option>
+      <option>Delhi</option>
+      <option>Karnataka</option>
+      <option>Tamil Nadu</option>
+      <option>Uttar Pradesh</option>
+      <option>Madhya Pradesh</option>
+      <option>Rajasthan</option>
+      <option>Bihar</option>
+      <option>West Bengal</option>
+      <!-- Add all states as before… -->
+  </select>
+
+  <select id="product" onchange="setPrice()" required>
+      <option value="">Select Product</option>
+      <option value="Puzzal">Puzzal ₹500</option>
+      <option value="T-Shirt">T-Shirt ₹999</option>
+      <option value="Video Game">Video Game ₹1050</option>
+  </select>
+
+  <input type="text" id="price" placeholder="Total Price" readonly>
+
+  <button id="submitBtn" onclick="submitOrder()">Order Now - Cash on Delivery</button>
+
+  <div id="successBox">
+      <h3>Order Confirmed!</h3>
+      <p>Your Order ID:</p>
+      <b id="orderIDBox" style="font-size:20px;"></b>
+  </div>
+
+</div>
+
+<!-- jsPDF for PDF Invoice -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+// Auto Price Based on Product
+function setPrice() {
+    const product = document.getElementById("product").value;
+    let price = 0;
+    if (product === "Puzzal") price = 500;
+    if (product === "T-Shirt") price = 999;
+    if (product === "Video Game") price = 1050;
+    document.getElementById("price").value = "₹" + price;
+}
+
+// Submit Order
+function submitOrder() {
+    let btn = document.getElementById("submitBtn");
+
+    // Disable button while processing
+    btn.disabled = true;
+    btn.innerText = "Processing...";
+
+    const data = {
+        fullname: document.getElementById("fullname").value,
+        mobile: document.getElementById("mobile").value,
+        address: document.getElementById("address").value,
+        landmark: document.getElementById("landmark").value,
+        pincode: document.getElementById("pincode").value,
+        city: document.getElementById("city").value,
+        state: document.getElementById("state").value,
+        product: document.getElementById("product").value,
+        price: document.getElementById("price").value.replace("₹","")
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbze3wQ-Nd8Y3q-IIbJv54cSjM0Ibs64o81qzBc2P3CjEADG1K_aBQu0tWdhWIg4sGtu/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+        if (res.status === "success") {
+            document.getElementById("orderIDBox").innerText = res.orderID;
+            document.getElementById("successBox").style.display = "block";
+
+            // Generate PDF Invoice
+            generatePDF(res.orderID, data);
+
+            // Reset form
+            resetForm();
+
+            // Enable button again
+            btn.disabled = false;
+            btn.innerText = "Submit Order";
+        }
+    })
+    .catch(err => {
+        alert("Error: " + err);
+        btn.disabled = false;
+        btn.innerText = "Submit Order";
+    });
+}
+
+
+// RESET FORM FUNCTION
+function resetForm() {
+    document.getElementById("fullname").value = "";
+    document.getElementById("mobile").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("landmark").value = "";
+    document.getElementById("pincode").value = "";
+    document.getElementById("city").value = "";
+    document.getElementById("state").selectedIndex = 0;
+    document.getElementById("product").selectedIndex = 0;
+    document.getElementById("price").value = "";
+}
+
+
+// PDF INVOICE GENERATION
+function generatePDF(orderID, data) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(18);
+    doc.text("Order Invoice", 80, 20);
+
+    doc.setFontSize(12);
+    doc.text(`Order ID: ${orderID}`, 20, 40);
+    doc.text(`Name: ${data.fullname}`, 20, 50);
+    doc.text(`Mobile: ${data.mobile}`, 20, 60);
+    doc.text(`Address: ${data.address}`, 20, 70);
+    doc.text(`City/State: ${data.city}, ${data.state}`, 20, 80);
+    doc.text(`Pincode: ${data.pincode}`, 20, 90);
+
+    doc.text(`Product: ${data.product}`, 20, 110);
+    doc.text(`Price: ₹${data.price}`, 20, 120);
+
+    doc.text("Thank you for your order!", 70, 150);
+
+    doc.save(`Invoice_${orderID}.pdf`);
+}
+</script>
+
+</body>
+</html>
