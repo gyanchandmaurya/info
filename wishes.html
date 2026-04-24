@@ -140,7 +140,7 @@
 
             <div class="form-group">
                 <!-- <label for="message">Message</label> -->
-                <textarea id="message" name="message" rows="4" placeholder="Write your remark (optional) "></textarea>
+                <textarea id="message" name="message" rows="1" placeholder="Write your remark (optional) "></textarea>
             </div>
 
             <button class="wishes_button" type="submit" id="submitBtn">Save Event</button>
@@ -239,12 +239,12 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 } 
-//---------COPY THIS INTO GOOGLE APPS FOR SAVE ENQUIRY FORM DATA SCRIPT  START-------- -->
+//---------COPY THIS INTO GOOGLE APPS FOR SAVE ENQUIRY FORM DATA SCRIPT  END-------- -->
 
 
 
 <!-- --------------Google Sheet Script for Send Wishes with 2 different method------------------ -->
-<!-- // 1-------Send Wishes by checking condotion by Wishes Type Image ID Start-----------------
+<!-- // 1-------Send Wishes by checking condotion by Wishes Type Image ID START-----------------
 function sendFormattedWishes() {
   // const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Wishes");
@@ -298,7 +298,7 @@ function sendFormattedWishes() {
     }
   }
 }
-// 1-------Send Wishes by checking condotion by Wishes Type Image ID End----------------- -->
+// 1-------Send Wishes by checking condotion by Wishes Type Image ID END----------------- -->
 
 
 
@@ -306,7 +306,7 @@ function sendFormattedWishes() {
 
 
 
-<!-- // 2------------------------------Send Wishes by Column Image ID Start----------------------------------------------------------
+<!-- // 2------------------------------Send Wishes by Excel Column Image ID START--------------------------
 function sendFormattedWishes() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Wishes");   //---Get Data by Sheet Name--- any one
 //  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();           //---Get Data by Active Sheet ---
@@ -364,4 +364,4 @@ function sendFormattedWishes() {
     }
   }
 }
-// 2------------------------------Send Wishes by Column Image ID End---------------------------------------------------------- -->
+// 2------------------------------Send Wishes by Excel Column Image ID END---------------------------------------------------------- -->
